@@ -39,7 +39,7 @@ def getRawData(userChoice):
     response = requests.request("GET", url, headers=headers, data=payload)
 
     if response.status_code == 200:
-        print("\nRequest was successful!\n")
+        print("\nAPI request was successful!\n")
         data = response.json()
         jsonData = json.dumps(data, indent=4, ensure_ascii=False)
         with open(f"./data/raw/{userChoice}TeamsData.json", "w", encoding="utf-8") as jsonFile:
@@ -47,6 +47,9 @@ def getRawData(userChoice):
     else:
         print(f"Error: {response.status_code}\n")
 
-if __name__ == "__main__":
-    userChoice = selectCountry()
-    getRawData(userChoice)
+    outputFileDir = f"./data/raw/{userChoice}TeamsData.json"
+    return outputFileDir
+
+# if __name__ == "__main__":
+#     userChoice = selectCountry()
+#     getRawData(userChoice)

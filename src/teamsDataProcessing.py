@@ -38,15 +38,7 @@ def processTeamsFile(filePath):
 
 def df2json(df, outputPath):
     df.to_json(outputPath, orient="records", indent=4, force_ascii=False)
-    
-# TODO
 
-"""
-Save different files in the same format automatically;
-JSON Server (?)
-"""
-
-if __name__ == "__main__":
-    df_filtered = processTeamsFile("./data/raw/PortugalTeamsData.json")
-    df2json(df_filtered, "./data/processed/PortugalTeamsData.json")
-    
+# if __name__ == "__main__":
+#     df_filtered = processTeamsFile("./data/raw/PortugalTeamsData.json")
+#     df2json(df_filtered, "./data/processed/PortugalTeamsData.json")

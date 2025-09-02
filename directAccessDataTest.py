@@ -1,6 +1,16 @@
 import json
+import os
 
-file_path = "data/processed/PortugalTeamsData.json"
+processedDataFolder = "./data/processed/"
+
+filesInDir = os.listdir(processedDataFolder)
+
+for i, file in enumerate(filesInDir, 1):
+    print(f"{i} : {file}")
+
+pickedFile = int(input("Select a file by number: \n>>>"))
+
+file_path = f"{processedDataFolder}{filesInDir[pickedFile - 1]}"
 
 with open(file_path, "r", encoding="utf-8") as json_file:
     teamsList = json.load(json_file)
