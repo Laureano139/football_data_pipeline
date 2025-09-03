@@ -33,9 +33,3 @@ def index():
 if __name__ == "__main__":
     app.json.ensure_ascii = False
     app.run(debug=True, port=5000)
-    
-    
-"""
-TODO:
-- Solve the "Error while fetching data!" in client-app code!
-"""
