@@ -1,8 +1,10 @@
 import json
 import os
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 PROCESSED_DATA_DIR = "./data/processed"
 
