@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Teams Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Football Teams Data</h1>
+        <p>A demonstration of a data engineering pipeline (I guess :D)</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="country-selector">Select a country:</label>
+            <select id="country-selector">
+                <option value="Portugal" selected>Portugal</option>
+                <option value="Spain">Spain</option>
+                <option value="Italy">Italy</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="England">England</option>
+            </select>
+        </div>
+        
+        <table id="teams-table">
+            <thead>
+                <tr>
+                    <th>Nome da Equipa</th>
+                    <th>País</th>
+                    <th>Fundada em</th>
+                    <th>Estádio</th>
+                    <th>Capacidade do Estádio</th>
+                    <th>Superfície</th>
+                </tr>
+            </thead>
+            <tbody id="teams-table-body">
+                
+            </tbody>
+        </table>
+        <p id="message"></p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
